@@ -1,10 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Register</title>
+
+<title>Login</title>
 <style>
 body {
 	font-family: "Times New Roman", Times, serif;
@@ -17,10 +19,20 @@ body {
 	color: #000000;
 }
 
-.register-box {
+.section {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+.login-box {
 	position: relative;
 	width: 400px;
-	height: 600px;
+	height: 450px;
 	background: #7ca1ff;
 	border: 2px solid rgba(255, 255, 255, .5);
 	border-radius: 20px;
@@ -38,7 +50,7 @@ h2 {
 .input-box {
 	position: relative;
 	width: 310px;
-	margin: 20px 0;
+	margin: 30px 0;
 	border-bottom: 2px solid #fff;
 }
 
@@ -50,7 +62,7 @@ h2 {
 	position: absolute;
 	top: 50%;
 	left: 5px;
-	transform: translateY(-50%);
+	transform: traslate(-50%);
 	font-size: 1em;
 	color: white;
 	pointer-events: none;
@@ -75,6 +87,27 @@ h2 {
 	line-height: 80px;
 }
 
+.remember-forgot {
+	margin: -15px 0 15px;
+	font-size: .9em;
+	color: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+
+.remember-fotgot label input {
+	margin-right: 3px;
+}
+
+.remember-forgot a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.remember-forgot a:hover {
+	text-decoration: underline;
+}
+
 button {
 	width: 100%;
 	height: 40px;
@@ -88,63 +121,61 @@ button {
 	font-weight: 500;
 }
 
-.login-link {
+.register-link {
 	font-size: .9em;
 	color: #fff;
 	text-align: center;
 	margin: 25px 0 10px;
 }
 
-.login-link p a {
+.register-link p a {
 	color: #fff;
 	text-decoration: none;
 	font-weight: 600;
 }
 
-.login-link p a:hover {
+.register-link p a hover {
 	text-decoration: underline;
 }
-</style>
 
+input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:focus,
+	input:-webkit-autofill:active {
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: white !important;
+	box-shadow: inset 0 0 20px 20px transparent;
+}
+</style>
 </head>
+
 <body>
-	<div class="register-box">
-		<form action="">
-			<h2>Đăng ký</h2>
+	<div class="login-box">
+		<form action="LoginController" method="post">
+			<c:if test="${alert !=null}">
+				<h3 class="alert alertdanger">${alert}</h3>
+			</c:if>
+
+			<h2>Đăng nhập</h2>
 			<div class="input-box">
-				<span class="icon"> <ion-icon name="person-outline"></ion-icon>
-				</span> <input type="text" required> <label>Tên đăng nhập</label>
-			</div>
-			<div class="input-box">
-				<span class="icon"> <ion-icon name="person-outline"></ion-icon>
-				</span> <input type="text" required> <label>Họ tên</label>
-			</div>
-			<div class="input-box">
-				<span class="icon"> <ion-icon name="mail-open-outline"></ion-icon>
-				</span> <input type="email" required> <label>Email</label>
-			</div>
-			<div class="input-box">
-				<span class="icon"> <ion-icon name="call-outline"></ion-icon>
-				</span> <input type="tel" required> <label>Số điện thoại</label>
+				<span class="icon"> <ion-icon name="username"></ion-icon>
+				</span> <input type="text" name="username" required> <label>Username</label>
 			</div>
 			<div class="input-box">
 				<span class="icon"> <ion-icon name="lock-closed"></ion-icon>
-				</span> <input type="password" required> <label>Mật khẩu</label>
+				</span> <input type="password" name="password" required> <label>Mật
+					khẩu</label>
 			</div>
-			<div class="input-box">
-				<span class="icon"> <ion-icon name="lock-closed"></ion-icon>
-				</span> <input type="password" required> <label>Nhập lại
-					mật khẩu</label>
+			<div class="remember-forgot">
+				<label><input type="checkbox" name="remember">Lưu
+					mật khẩu</label> <a href="verify.jsp">Quên mật khẩu?</a>
 			</div>
-			<button type="submit">Đăng ký</button>
-			<div class="login-link">
+			<button>Đăng nhập</button>
+			<div class="register-link">
 				<p>
-					Bạn đã có tài khoản? <a href="login.html">Đăng nhập</a>
+					Chưa có tài khoản? <a href="register.jsp">Tạo tài khoản mới</a>
 				</p>
 			</div>
 		</form>
 	</div>
-
 	<script type="module"
 		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule

@@ -4,7 +4,6 @@ import java.io.Serializable;
 import java.sql.Date;
 
 public class UserModel implements Serializable{
-	
 	public UserModel() {
 		super();
 	}
@@ -17,6 +16,7 @@ public class UserModel implements Serializable{
 	private int roleid;
 	private String phone;
 	private Date createdDate;
+	
 	public UserModel(int id, String email, String userName, String fullName, String passWord, String avatar, int roleid, String phone, Date createdDate) {
 		this.id = id;
 		this.email = email;

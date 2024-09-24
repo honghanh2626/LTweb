@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Quên mật khẩu</title>
+<title>Register</title>
 <style>
 body {
 	font-family: "Times New Roman", Times, serif;
@@ -17,10 +17,10 @@ body {
 	color: #000000;
 }
 
-.forgot-password-box {
+.register-box {
 	position: relative;
 	width: 400px;
-	height: 300px;
+	height: 600px;
 	background: #7ca1ff;
 	border: 2px solid rgba(255, 255, 255, .5);
 	border-radius: 20px;
@@ -38,7 +38,7 @@ h2 {
 .input-box {
 	position: relative;
 	width: 310px;
-	margin: 30px 0;
+	margin: 20px 0;
 	border-bottom: 2px solid #fff;
 }
 
@@ -105,23 +105,49 @@ button {
 	text-decoration: underline;
 }
 </style>
+
 </head>
 <body>
-	<div class="forgot-password-box">
-		<form action="">
-			<h2>Quên Mật Khẩu</h2>
+	<div class="register-box">
+		<form action="RegisterController" method="POST">
+			<c:if test="${alert !=null}">
+				<h3 class="alert alertdanger">${alert}</h3>
+			</c:if>
+			<h2>Đăng ký</h2>
+			<div class="input-box">
+				<span class="icon">
+				</span> <input type="text" name = "username" required> <label>Tên đăng nhập</label>
+			</div>
+			<div class="input-box">
+				<span class="icon"> <ion-icon name="person-outline"></ion-icon>
+				</span> <input type="text"  name = "fullname" required> <label>Họ tên</label>
+			</div>
 			<div class="input-box">
 				<span class="icon"> <ion-icon name="mail-open-outline"></ion-icon>
-				</span> <input type="email" required> <label>Email</label>
+				</span> <input type="email"  name = "email" required> <label>Email</label>
 			</div>
-			<button type="submit">Gửi yêu cầu</button>
+			<div class="input-box">
+				<span class="icon"> <ion-icon name="call-outline"></ion-icon>
+				</span> <input type="tel" name = "phone" required> <label>Số điện thoại</label>
+			</div>
+			<div class="input-box">
+				<span class="icon"> <ion-icon name="lock-closed"></ion-icon>
+				</span> <input type="password" name = "password" required> <label>Mật khẩu</label>
+			</div>
+			<div class="input-box">
+				<span class="icon"> <ion-icon name="lock-closed"></ion-icon>
+				</span> <input type="password"  name = "confirmpassword" required> <label>Nhập lại
+					mật khẩu</label>
+			</div>
+			<button type="submit">Đăng ký</button>
 			<div class="login-link">
 				<p>
-					Nhớ lại mật khẩu? <a href="login.jsp">Đăng nhập</a>
+					Bạn đã có tài khoản? <a href="login.jsp">Đăng nhập</a>
 				</p>
 			</div>
 		</form>
 	</div>
+
 	<script type="module"
 		src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule

@@ -6,11 +6,18 @@ import vn.iotstar.models.UserModel;
 
 public interface IUserDao {
 
-	UserModel get(String username);
+	List<UserModel> findAll();
+
+	UserModel findById(int id);
+
 	void insert(UserModel user);
+
+	UserModel findByUserName(String username);
+
+
 	boolean checkExistEmail(String email);
+
 	boolean checkExistUsername(String username);
+
 	boolean checkExistPhone(String phone);
-	public boolean updatePassword(String username, String newPassword);
-	
 }

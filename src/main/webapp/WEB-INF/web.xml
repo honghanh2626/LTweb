@@ -1,22 +1,47 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="5.0">
   <display-name>ltwebsangt4</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
-    <welcome-file>index.htm</welcome-file>
-    <welcome-file>index.jsp</welcome-file>
-    <welcome-file>default.html</welcome-file>
-    <welcome-file>default.htm</welcome-file>
-    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>login.jsp</welcome-file>
   </welcome-file-list>
   <servlet>
     <description></description>
-    <display-name>newRegister</display-name>
-    <servlet-name>newRegister</servlet-name>
-    <servlet-class>vn.iotstar.controllers.newRegister</servlet-class>
+    <display-name>LoginController</display-name>
+    <servlet-name>LoginController</servlet-name>
+    <servlet-class>vn.iotstar.controllers.LoginController</servlet-class>
   </servlet>
   <servlet-mapping>
-    <servlet-name>newRegister</servlet-name>
-    <url-pattern>/newRegister</url-pattern>
+    <servlet-name>LoginController</servlet-name>
+    <url-pattern>/views/LoginController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>WaitingController</display-name>
+    <servlet-name>WaitingController</servlet-name>
+    <servlet-class>vn.iotstar.controllers.WaitingController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>WaitingController</servlet-name>
+    <url-pattern>/WaitingController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>RegisterController</display-name>
+    <servlet-name>RegisterController</servlet-name>
+    <servlet-class>vn.iotstar.controllers.RegisterController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterController</servlet-name>
+    <url-pattern>/views/RegisterController</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>tesst</display-name>
+    <servlet-name>tesst</servlet-name>
+    <servlet-class>vn.iotstar.controllers.tesst</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>tesst</servlet-name>
+    <url-pattern>/tesst</url-pattern>
   </servlet-mapping>
 </web-app>
