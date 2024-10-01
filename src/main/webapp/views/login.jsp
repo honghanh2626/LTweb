@@ -171,7 +171,7 @@ input:-webkit-autofill, input:-webkit-autofill:hover, input:-webkit-autofill:foc
 			<button>Đăng nhập</button>
 			<div class="register-link">
 				<p>
-					Chưa có tài khoản? <a href="register.jsp">Tạo tài khoản mới</a>
+					Chưa có tài khoản? <a href="views/register.jsp">Tạo tài khoản mới</a>
 				</p>
 			</div>
 		</form>

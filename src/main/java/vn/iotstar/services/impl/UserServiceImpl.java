@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService {
 	}
 
 	@Override
-	public boolean register(String email, String password, String username, String fullname, String phone) {
+	public boolean register(String username, String password, String email, String fullname, String phone) {
 		// TODO Auto-generated method stub
 		if (userDao.checkExistUsername(username)) {
 			return false;
@@ -41,7 +41,12 @@ public class UserServiceImpl implements UserService {
 
 		long millis = System.currentTimeMillis();
 		java.sql.Date date = new java.sql.Date(millis);
-		userDao.insert(new UserModel(2138123, email, username, fullname, password, null, 2, phone, date));
+		double randomDouble = 0;
+		for (int i = 0; i < 5; i++) {
+			double randomNumber = Math.random();
+			randomDouble += randomNumber * 100 + 1;
+		}
+		userDao.insert(new UserModel((int) randomDouble, email, username, fullname, password, null, 2, phone, date));
 		return true;
 	}
 

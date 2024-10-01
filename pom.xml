@@ -1,4 +1,6 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>vn.iotstar</groupId>
 	<artifactId>ltwebsangt4</artifactId>
@@ -19,7 +21,8 @@
 			<version>9.4.1.jre16</version>
 		</dependency>
 
-		<!-- https://mvnrepository.com/artifact/jakarta.authentication/jakarta.authentication-api -->
+		<!--
+		https://mvnrepository.com/artifact/jakarta.authentication/jakarta.authentication-api -->
 		<dependency>
 			<groupId>jakarta.authentication</groupId>
 			<artifactId>jakarta.authentication-api</artifactId>
@@ -28,7 +31,8 @@
 
 		<!--
 		https://mvnrepository.com/artifact/jakarta.servlet.jsp.jstl/jakarta.servlet.jsp.jstl-api -->
-		<!-- https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
+		<!--
+		https://mvnrepository.com/artifact/jakarta.servlet.jsp/jakarta.servlet.jsp-api -->
 		<dependency>
 			<groupId>jakarta.servlet.jsp</groupId>
 			<artifactId>jakarta.servlet.jsp-api</artifactId>
@@ -53,7 +57,8 @@
 			<version>4.0.0</version>
 			<scope>provided</scope>
 		</dependency>
-		<!-- https://mvnrepository.com/artifact/jakarta.websocket/jakarta.websocket-api -->
+		<!--
+		https://mvnrepository.com/artifact/jakarta.websocket/jakarta.websocket-api -->
 		<dependency>
 			<groupId>jakarta.websocket</groupId>
 			<artifactId>jakarta.websocket-api</artifactId>
@@ -68,6 +73,12 @@
 			<artifactId>mysql-connector-java</artifactId>
 			<version>8.0.33</version>
 		</dependency>
+		<dependency>
+			<groupId>org.sitemesh</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>3.2.1</version>
+		</dependency>
+
 	</dependencies>
 	<build>
 		<plugins>

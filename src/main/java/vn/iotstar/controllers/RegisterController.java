@@ -32,7 +32,6 @@ public class RegisterController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.print("Huhu");
 		HttpSession session = req.getSession(false);
 
 		if (session != null && session.getAttribute("username") != null) {
@@ -60,7 +59,6 @@ public class RegisterController extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-		System.out.print("Hihi");
 		resp.setContentType("text/html");
 		resp.setCharacterEncoding("UTF-8");
 		req.setCharacterEncoding("UTF-8");

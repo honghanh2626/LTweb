@@ -83,13 +83,13 @@ public class UserDaoImpl implements IUserDao {
 			ps = conn.prepareStatement(sql);
 			
 			ps.setInt(1, user.getId());
-			ps.setString(6, user.getEmail());
 			ps.setString(2, user.getUserName());
-			ps.setString(5, user.getFullName());
 			ps.setString(3, user.getPassWord());
 			ps.setString(4, user.getAvatar());
-			ps.setInt(8, user.getRoleid());
+			ps.setString(5, user.getFullName());
+			ps.setString(6, user.getEmail());
 			ps.setString(7, user.getPhone());
+			ps.setInt(8, user.getRoleid());
 			ps.setDate(9, user.getCreatedDate());
 			ps.executeUpdate();
 
